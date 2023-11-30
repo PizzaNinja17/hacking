@@ -1375,14 +1375,14 @@ function signed_in () {
                 story.printText("can you get into a computer without a password?", 70, 0, 3)
                 story.showPlayerChoices("True", "False")
                 if (story.checkLastAnswer("True")) {
-                    story.printText("So you could be a hacker?", 70, 0, 3)
+                    story.printText("So YOU could be a hacker?", 70, 0, 3)
                     story.showPlayerChoices("Yes", "No")
                 } else {
                     game.gameOver(false)
                 }
                 if (story.checkLastAnswer("Yes")) {
                     story.printText("Ok then what is the password to this computer?", 70, 0, 3)
-                    story.showPlayerChoices(password.substr(0, 10), "" + password + "9162", password, password.substr(8, 24), "I don't remember")
+                    story.showPlayerChoices(password.substr(0, 7), "" + password + "9162", password, password.substr(8, 24), "I don't remember")
                     if (story.checkLastAnswer(password)) {
                         emaillogincomplete()
                     } else {
@@ -3639,7 +3639,7 @@ function queston (num: number) {
         if (num == 3) {
             lazergunequiped = false
             story.printText("what does the CIA triad stand for?", platfomerguy.x, platfomerguy.y)
-            story.showPlayerChoices("Code Index Array", "Confidentiality Integrity Access", "Cyber Intel Access", "Confidentiality Integrity Availability ")
+            story.showPlayerChoices("Code Index Array", "Central intelligence Agency", "Cyber Intel Access", "Confidentiality Integrity Availability ")
             if (story.checkLastAnswer("Confidentiality Integrity Availability ")) {
                 controller.moveSprite(platfomerguy, 90, 0)
                 lazergunequiped = true
