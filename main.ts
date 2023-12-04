@@ -5372,6 +5372,7 @@ if (blockSettings.readNumber("Part") == 1 || !(blockSettings.exists("Part"))) {
             Load_In()
         } else {
             story.printText("Password could be better.....ERROR", 75, 0, 7, 15, story.TextSpeed.Slow)
+            story.printText("You must include, numbers, symbols and a eight characters", 75, 0, 7, 15, story.TextSpeed.Slow)
             game.setGameOverEffect(false, effects.dissolve)
             game.gameOver(false)
         }
